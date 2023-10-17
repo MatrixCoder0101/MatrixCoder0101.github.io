@@ -15,15 +15,16 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { target } = e;
+  const { name, value } = target;
 
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
+  setForm({
+    ...form,
+    [name]: value,
+  });
+};
+
 
   const handleSubmit = (e) => {
     e.preventDefault();

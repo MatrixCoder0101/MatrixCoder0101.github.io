@@ -7,9 +7,9 @@ const ProjectCards = () => {
       <h2 className="text-center text-white text-3xl font-bold mb-4">Projects</h2>
       <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <div key={index} className="glassmorphism bg-white rounded-lg shadow-md relative">
+          <div key={index} className="glassmorphism bg-white rounded-lg shadow-md relative h-65">
             <h3 className="text-xl font-semibold text-center pt-4">{project.name}</h3>
-            <p className="text-gray-600 py-2 px-4">{project.description}</p>
+            <p className="text-gray-600 py-2 px-4 h-15">{project.description}</p>
             <div className="absolute bottom-4 left-4">
               {project.tags.map((tag, tagIndex) => (
                 <span

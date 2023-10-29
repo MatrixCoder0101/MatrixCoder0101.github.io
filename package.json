@@ -16,6 +16,9 @@
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",
+    "react-speech-recognition": "^3.10.0",
+    "react-tilt": "^1.0.2",
+    "react-use-clipboard": "^1.0.9",
     "styled-components": "^6.1.0"
   },
   "devDependencies": {

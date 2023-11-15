@@ -1,6 +1,6 @@
-import { NextResponse, NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export default function GET(request: NextRequest) {
-  const name = request.name;
-  return NextResponse.json({ message: "Hello, World!" });
+export function GET(request: NextRequest) {
+ const url = request.nextUrl;
+ return NextResponse.json({ HelloWorld: url });
 }

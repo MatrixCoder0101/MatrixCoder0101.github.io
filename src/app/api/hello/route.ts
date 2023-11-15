@@ -1,9 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
- export function GET(request: NextRequest) {
-  
-  const url = request.nextUrl;
-
-   return NextResponse.json({ url: url });
-
+export default function handler() {
+  return NextResponse.json({ message: "Hello, World!" });
 }

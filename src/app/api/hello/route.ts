@@ -1,7 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-export function GET(request: NextRequest) {
-  //const jsonResponse = { message: "Hello, World!" };
-
-  return NextResponse.json({ message: "Hello, World!" });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ name: 'John Doe' })
 }

@@ -9,17 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-ai/generativelanguage": "^2.0.0",
     "@react-three/drei": "^9.88.2",
     "@react-three/fiber": "^8.14.5",
+    "axios": "^1.6.2",
     "framer-motion": "^10.16.4",
-    "next": "13.5.5",
+    "fs": "^0.0.1-security",
+    "google-auth-library": "^9.4.1",
+    "next": "^13.5.6",
+    "path": "^0.12.7",
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",
     "react-speech-recognition": "^3.10.0",
     "react-tilt": "^1.0.2",
     "react-use-clipboard": "^1.0.9",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "truesearch": "^1.0.2"
   },
   "devDependencies": {
     "@types/node": "^20",

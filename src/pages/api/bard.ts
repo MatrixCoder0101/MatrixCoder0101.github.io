@@ -29,7 +29,7 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
       candidateCount: 1,
       prompt: {
         context: 'Respond to all the questions in a good manner.',
-        messages: [{ content: query }],
+        messages: [{ content: Array.isArray(query) ? query.join(' ') : query }],
       },
     });
 

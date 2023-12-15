@@ -6,8 +6,8 @@ type Data = {
   name?: string;
   error?: string;
   answer?: string;
+  query?: string | string[] | undefined;
 }
-
 
 export default async function handler( req: NextApiRequest, res: NextApiResponse<Data> ) {
   const MODEL_NAME = "models/chat-bison-001";

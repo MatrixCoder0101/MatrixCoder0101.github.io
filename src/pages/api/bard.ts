@@ -26,8 +26,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
     });
 
-    const ans: string = result[0].candidates[0].content;
-    res.json({ ans });
+    if (result && result[0] && result[0].candidates && result[0].candidates[0]) {
+      const ans: string = result[0].candidates[0].content;
+      res.json({ ans });
+    } else {
+      res.status(500).json({ error: 'Invalid response structure' });
+    }
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });

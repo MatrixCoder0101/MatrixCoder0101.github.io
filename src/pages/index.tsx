@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import { Inter } from 'next/font/google'
+
 import { Hero, Navbar, Social, Footer, Globe, Projects, Tawk } from "../components"
 
 export default function Home() {

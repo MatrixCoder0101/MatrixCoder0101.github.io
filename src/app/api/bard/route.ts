@@ -27,8 +27,13 @@ export async function GET(request: Request) {
       },
     });
 
-    const ans = result[0].candidates[0].content;
-    return NextResponse.json({ ans }, { status: 500 })
+    const ans = result?.[0]?.candidates?.[0]?.content;
+
+    if (ans) {
+      return NextResponse.json({ ans }, { status: 500 })
+    } else {
+      return NextResponse.json({ error: "No answer found" }, { status: 500 })
+    }
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 })

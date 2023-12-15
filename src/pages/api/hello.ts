@@ -6,7 +6,7 @@ type Data = {
 }
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse<Data>
 ) {
   res.json({ message: 'Hello World!' });
 }

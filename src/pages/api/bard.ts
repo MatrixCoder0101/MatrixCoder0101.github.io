@@ -1,21 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next';
 import { DiscussServiceClient } from "@google-ai/generativelanguage";
 import { GoogleAuth } from "google-auth-library";
 
-type Data = {
-  name?: string;
-  error?: string;
-  answer?: string;
-  query?: string | string[] | undefined;
-}
-
-export default async function handler( req: NextApiRequest, res: NextApiResponse<Data> ) {
-  const MODEL_NAME = "models/chat-bison-001";
-  const API_KEY = "AIzaSyCdf0QI11bfqok5uX1UXuTvonUkeOF8ooM";
-  const query = req.query.query;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const MODEL_NAME: string = "models/chat-bison-001";
+  const API_KEY: string = "AIzaSyCdf0QI11bfqok5uX1UXuTvonUkeOF8ooM";
+  const query: string = req.query.query as string;
 
   if (!query) {
-    res.json({ error: 'Give me a query.' });
+    return res.status(400).json({ error: 'Give me a query.' });
   }
 
   const client = new DiscussServiceClient({
@@ -29,14 +22,14 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
       candidateCount: 1,
       prompt: {
         context: 'Respond to all the questions in a good manner.',
-        messages: [{ content: Array.isArray(query) ? query.join(' ') : query }],
+        messages: [{ content: query }],
       },
     });
 
-    const answer = result[0].candidates[0].content;
-    res.json({ answer });
+    const ans: string = result[0].candidates[0].content;
+    res.json({ ans });
   } catch (error) {
     console.error(error);
-    res.json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 }

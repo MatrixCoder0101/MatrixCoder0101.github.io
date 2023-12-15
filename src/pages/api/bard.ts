@@ -3,10 +3,11 @@ import { DiscussServiceClient } from "@google-ai/generativelanguage";
 import { GoogleAuth } from "google-auth-library";
 
 type Data = {
-  name: string,
-  error: string,
-  answer: string
+  name?: string;
+  error?: string;
+  answer?: string;
 }
+
 
 export default async function handler( req: NextApiRequest, res: NextApiResponse<Data> ) {
   const MODEL_NAME = "models/chat-bison-001";

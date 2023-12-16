@@ -8,7 +8,7 @@ export async function GET(request: Request) {
         return NextResponse.json({ error: "Give me a query" }, { status: 500 });
     }
     
-        const apiEndpoint = `https://matrix-api-service.up.railway.app/gpt?text=${encodeURIComponent(query)}`;
+        const apiEndpoint = `https://supreme-catfish-goutammallick516.koyeb.app/gpt?text=${encodeURIComponent(query)}`;
         const response = await axios.get(apiEndpoint);
         const responseData = response.data.result;
 

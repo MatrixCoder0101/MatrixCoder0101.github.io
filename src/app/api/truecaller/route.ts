@@ -4,7 +4,6 @@ import axios from 'axios';
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const phone = searchParams.get("phone")
-    const mq = `+${phone}`;
     const id = searchParams.get("id")
 
    const apiUrl = `https://supreme-catfish-goutammallick516.koyeb.app/truecaller?phone=${phone}&id=${id}`;

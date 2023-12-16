@@ -1,6 +1,8 @@
 //ChatBot
 "use client"
-import { useState, useEffect } from 'react';
+
+import { useState } from 'react';
+import axios from 'axios';
 
 const TypewriterEffect = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState('');
@@ -12,34 +14,30 @@ const TypewriterEffect = ({ text }: { text: string }) => {
     }
   };
 
-  useEffect(() => {
-    typeWriter();
-  }, []); // Run only once when component mounts
-
-  return <div>{displayText}</div>;
+  return (
+    <div>
+      <p>{displayText}</p>
+      {displayText.length === text.length || (
+        <button onClick={typeWriter}>Show Answer</button>
+      )}
+    </div>
+  );
 };
 
-const Home = () => {
+const Chatbot = () => {
   const [userQuery, setUserQuery] = useState('');
   const [answer, setAnswer] = useState('');
 
   const handleAskQuestion = async () => {
     try {
-      const response = await fetch(`/api/bard?query=${userQuery}`);
-      const data = await response.json();
-      const ans = data.ans || 'No answer found';
+      const response = await axios.get(`/api/bard?query=${userQuery}`);
+      const ans = response.data.ans || 'No answer found';
       setAnswer(ans);
     } catch (error) {
       console.error(error);
       setAnswer('Internal Server Error');
     }
   };
-
-  useEffect(() => {
-    if (userQuery !== '') {
-      handleAskQuestion();
-    }
-  }, [userQuery]); // Run when userQuery changes
 
   return (
     <div className="container mx-auto p-4">
@@ -63,4 +61,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Chatbot;

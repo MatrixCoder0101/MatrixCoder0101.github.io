@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import truesearch from 'truesearch';
+import axios from 'axios';
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
@@ -7,6 +7,12 @@ export async function GET(request: Request) {
     const mq = `+${phone}`;
     const id = searchParams.get("id")
 
-    const result = await truesearch(mq, id);
-    return NextResponse.json(result, { status: 500 });
+   const apiUrl = `https://supreme-catfish-goutammallick516.koyeb.app/truecaller?phone=${phone}&id=${id}`;
+   let response = await axios.get(apiUrl);
+   let json = response.data;
+   if (json) {
+    return NextResponse.json(json, { status: 500 });
+  } else {
+    return NextResponse.json({ error: 'Kuch Gadbad he'}, { status: 500 });
+  }
 }

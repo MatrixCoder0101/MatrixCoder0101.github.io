@@ -1,4 +1,5 @@
 //ChatBot
+"use client"
 import { useState, useEffect } from 'react';
 
 const TypewriterEffect = ({ text }: { text: string }) => {

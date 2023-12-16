@@ -31,7 +31,8 @@ const Chatbot = () => {
 
     try {
       setChatHistory((prevHistory) => [...prevHistory, `You: ${userQuery}`]);
-      const response = await axios.get(`../api/bard?query=${userQuery}`);
+      const response = await
+      axios.get(`https://matrix-coder.vercel.app/api/bard?query=${userQuery}`);
       const ans = response.data.ans || 'No answer found';
       setAnswer(ans);
       setChatHistory((prevHistory) => [...prevHistory, `ChatBot: ${ans}`]);

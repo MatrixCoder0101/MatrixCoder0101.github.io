@@ -10,10 +10,10 @@ export async function GET(request: Request) {
     
         const apiEndpoint = `https://supreme-catfish-goutammallick516.koyeb.app/gpt?text=${encodeURIComponent(query)}`;
         const response = await axios.get(apiEndpoint);
-        const responseData = response.data.result;
+        const result = response.data.result;
 
         if (responseData) {
-            return NextResponse.json({ responseData }, { status: 500 });
+            return NextResponse.json({ result }, { status: 500 });
         } else {
             return NextResponse.json(
                 { error: "No answer found" },

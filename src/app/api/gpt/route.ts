@@ -12,7 +12,7 @@ export async function GET(request: Request) {
         const response = await axios.get(apiEndpoint);
         const result = response.data.result;
 
-        if (responseData) {
+        if (result) {
             return NextResponse.json({ result }, { status: 500 });
         } else {
             return NextResponse.json(

@@ -6,7 +6,7 @@ export async function GET(request: Request) {
     const phone = searchParams.get("phone");
     const id = searchParams.get("id");
 
-    const apiUrl = `https://supreme-catfish-goutammallick516.koyeb.app/truecaller?phone=${phone}&id=${id}`;
+    const apiUrl = `https://matrix-nextjs-api.vercel.app//truecaller?phone=${phone}&id=${id}`;
     let response = await axios.get(apiUrl);
     let json = response.data;
     if (json) {

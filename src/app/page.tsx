@@ -6,7 +6,9 @@ import { Hero, Navbar, Social, Footer, Globe, Projects, Tawk, MatrixRainingCode 
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen">
+      <MatrixRainingCode className="absolute inset-0" />
+      <div className="flex flex-col">
       <Navbar />
       <Tawk />
       <br />   <br />   <br />   <br />
@@ -15,6 +17,7 @@ export default function Home() {
       <Globe />
       <Social />
       <Footer />
+    </div>
     </div>
   );
 }

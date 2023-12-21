@@ -7,7 +7,7 @@ import { Hero, Navbar, Social, Footer, Globe, Projects, Tawk, MatrixRainingCode 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <MatrixRainingCode className="absolute inset-0" />
+      <MatrixRainingCode />
       <div className="flex flex-col">
       <Navbar />
       <Tawk />

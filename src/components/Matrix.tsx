@@ -1,16 +1,12 @@
 import React, { useEffect, useRef } from "react";
 
 
-interface MatrixRainingCodeProps {
-  className: string;
-}
-
-const MatrixRainingCode: React.FC<MatrixRainingCodeProps> = ({ className }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+const MatrixRainingCode = () => {
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
+    const ctx = canvas.getContext("2d");
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
     let columns = Math.floor(width / 20); // Number of columns based on character width
@@ -87,8 +83,7 @@ const MatrixRainingCode: React.FC<MatrixRainingCodeProps> = ({ className }) => {
     };
   }, []);
 
-  return <canvas className={`matrix-canvas fixed top-0 left-0 z-[-1] ${className}`} ref={canvasRef}></canvas>;
+  return <canvas className="matrix-canvas fixed top-0 left-0 z-[-1]" ref={canvasRef}></canvas>;
 };
-
 
 export default MatrixRainingCode;

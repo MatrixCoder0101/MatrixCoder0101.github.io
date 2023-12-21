@@ -6,7 +6,7 @@ const MatrixRainingCode = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas?.getContext("2d");
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
     let columns = Math.floor(width / 20); // Number of columns based on character width

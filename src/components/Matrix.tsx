@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from "react";
 
 
-const MatrixRainingCode = ({ className }) => {
+interface MatrixRainingCodeProps {
+  className: string;
+}
+
+const MatrixRainingCode: React.FC<MatrixRainingCodeProps> = ({ className }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {

@@ -6,7 +6,7 @@ interface MatrixRainingCodeProps {
 }
 
 const MatrixRainingCode: React.FC<MatrixRainingCodeProps> = ({ className }) => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;

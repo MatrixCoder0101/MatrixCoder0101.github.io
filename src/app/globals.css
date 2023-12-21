@@ -31,16 +31,7 @@
   }
 }
 
-body {
-  /* color: rgb(var(--foreground-rgb)); */
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-    background: #183350;
-}
+
 
 h1 { 
      margin: 0 0 30px 4px; 

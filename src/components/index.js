@@ -5,6 +5,5 @@ import Footer from "./Footer";
 import Globe from "./Globe";
 import Projects from "./Projects";
 import Tawk from "./Tawk";
-import MatrixRainingCode from "./Matrix"
 
-export { Hero, Navbar, Social, Footer, Globe, Projects, Tawk, MatrixRainingCode };
+export { Hero, Navbar, Social, Footer, Globe, Projects, Tawk };

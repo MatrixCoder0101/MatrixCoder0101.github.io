@@ -11,10 +11,10 @@ import { Typewriter } from "react-simple-typewriter";
 const Hero = () => {
     return (
         <div className="bg-hero bg-cover bg-center h-screen items-center mx-3">
-            <h1 className="text-3xl sm:text-6xl lg:text-9xl font-bold mb-4">
+            <h1 className="text-lime-400 text-3xl sm:text-6xl lg:text-9xl font-bold mb-4">
                 Hi, my name is
             </h1>
-            <h2 className="name text-4xl sm:text-6xl lg:text-9xl font-bold mb-5">
+            <h2 className="text-red-600 text-4xl sm:text-6xl lg:text-9xl font-bold mb-5">
                 Goutam.
             </h2>
             <h2 className="iam text-lg sm:text-3xl lg:text-6xl font-semibold">

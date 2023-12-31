@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container mx-auto py-8 px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h2 className="text-xl font-bold mb-4 text-green-500">Follow Me</h2>
+            <h2 className="text-xl font-bold mb-4 text-white">Follow Me</h2>
             <p className="text-gray-400">
               Hello Friends do U went to stay connected with me then U can
               Follow me on this Social media Platforms.
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
     
           <div>
-            <h3 className="text-xl font-bold mb-4 text-green-500">Contact Us</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">Contact Us</h3>
             <p className="text-gray-400 mb-2">
               Address: India , Odisha/Moyurbhanj , 757040
             </p>

@@ -32,29 +32,18 @@
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb)); */
-  /* background: linear-gradient(
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb)); */
-    background: #183350;
+    rgb(var(--background-start-rgb));
 }
 
 
-h1 { 
-     margin: 0 0 30px 4px; 
-     color: var(--green); 
-     font-family: var(--font-mono); 
-     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md)); 
-     font-weight: 400; 
-  
-     @media (max-width: 480px) { 
-       margin: 0 0 20px 2px; 
-     } 
-   } 
-  
+
+
   .name { 
      margin: 0 0 30px 4px; 
      color: white; 

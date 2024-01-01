@@ -14,11 +14,11 @@ const Hero = () => {
             <h1 className="text-lime-400 text-3xl sm:text-6xl lg:text-9xl font-bold mb-4">
                 Hi, my name is
             </h1>
-            <h2 className="text-red-600 text-4xl sm:text-6xl lg:text-9xl font-bold mb-5">
+            <h2 className="text-indigo-600 text-4xl sm:text-6xl lg:text-9xl font-bold mb-5">
                 Goutam.
             </h2>
             <h2 className="iam text-lg sm:text-3xl lg:text-6xl font-semibold">
-                I am a{" "}
+                and I am a{" "}
                 <span
                     style={{
                         color: "red",

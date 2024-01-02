@@ -14,7 +14,6 @@ export default function Home() {
       <Hero />
       <Projects />
       <Globe />
-      <Social />
       <Footer />
     </div>
   );

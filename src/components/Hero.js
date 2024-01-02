@@ -36,12 +36,12 @@ const Hero = () => {
                     />
                 </span>
             </h2>
-            <p className="text-white sm:text-lg lg:text-2xl mt-8">
+            <b className="text-white sm:text-lg lg:text-2xl mt-8">
                 Hello friends I’m a new Developer from India. Please support me
                 specializing in building (and occasionally designing)
                 exceptional digital experiences. Currently, I’m focused on
                 NextJS Framework.
-            </p>
+            </b>
             <div className="flex mt-4">
                 <a
                     href="https://github.com/MatrixCoder0101"

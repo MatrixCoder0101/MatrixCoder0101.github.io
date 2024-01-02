@@ -53,7 +53,7 @@ const Hero = () => {
                 </a>
                 <a
                     href="#"
-                    className="mr-4 text-black hover:text-green-500"
+                    className="mr-4 text-blue-600 hover:text-green-500"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -61,7 +61,7 @@ const Hero = () => {
                 </a>
                 <a
                     href="#"
-                    className="mr-4 text-black hover:text-green-500"
+                    className="mr-4 text-blue-500 hover:text-green-500"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

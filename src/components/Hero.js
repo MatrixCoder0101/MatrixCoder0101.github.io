@@ -53,7 +53,7 @@ const Hero = () => {
                 </a>
                 <a
                     href="#"
-                    className="mr-4 text-gray-400 hover:text-green-500"
+                    className="mr-4 text-black hover:text-green-500"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -61,7 +61,7 @@ const Hero = () => {
                 </a>
                 <a
                     href="#"
-                    className="mr-4 text-gray-400 hover:text-white"
+                    className="mr-4 text-black hover:text-green-500"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -69,7 +69,7 @@ const Hero = () => {
                 </a>
                 <a
                     href="https://instagram.com/matrixcoder.dev"
-                    className="text-gray-400 hover:text-white"
+                    className="text-pink-600 hover:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

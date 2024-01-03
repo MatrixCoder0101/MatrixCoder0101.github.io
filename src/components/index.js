@@ -1,10 +1,9 @@
 import Hero from "./Hero";
 import MatrixRain from "./Matrix"
 import Navbar from "./Navbar";
-import Social from "./Social";
 import Footer from "./Footer";
 import Globe from "./Globe";
 import Projects from "./Projects";
 import Tawk from "./Tawk";
 
-export { Hero, MatrixRain, Navbar, Social, Footer, Globe, Projects, Tawk };
+export { Hero, MatrixRain, Navbar, Footer, Globe, Projects, Tawk };

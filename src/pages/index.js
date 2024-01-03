@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { Hero, MatrixRain, Navbar, Social, Footer, Globe, Projects, Tawk } from "../components"
+import { Hero, MatrixRain, Navbar, Footer, Globe, Projects, Tawk } from "../components"
 
 const inter = Inter({ subsets: ['latin'] })
 

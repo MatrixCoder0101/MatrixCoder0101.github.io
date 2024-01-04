@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link'
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -35,21 +36,21 @@ export default function Navbar() {
                   
       </div>
       <div className="flex flex-col p-4">
-      <a
-        href="#"
+      <Link
+        href="/"
         className=" text-teal-500 text-xl font-semibold">
                     HOME
-      </a>
-      <a
-        href="#"
+      </Link>
+      <Link
+        href="/about"
         className="text-green-300 text-xl font-semibold">
                     ABOUT
-      </a>
-       <a
-         href="#"
+      </Link>
+      <Link
+         href="/contact"
          className="text-green-400 text-xl font-semibold">
                     CONTACT
-      </a>
+      </Link>
       </div>
       </motion.div>
       <header className="glassmorphism-header backdrop-filter backdrop-blur-lg bg-white h10 bg-opacity-10 rounded-lg p-2 text-white fixed w-full top-0 z-40 flex  items-center justify-between">

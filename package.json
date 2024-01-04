@@ -17,6 +17,7 @@
     "axios": "^1.6.3",
     "framer-motion": "^10.16.16",
     "next": "13.5.6",
+    "nextjs-progressbar": "^0.0.16",
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",

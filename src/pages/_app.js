@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import { Navbar } from '../components'
+import { LoadingScreen, Navbar } from '../components'
 import NextNProgress from 'nextjs-progressbar';
 
 export default function App({ Component, pageProps }) {
